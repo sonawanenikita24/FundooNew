@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+             x:Class="FundooApplication.Pages.SettingPage">
+    <ContentPage.Content>
+        <StackLayout Margin="10,15,10,10">
+            <StackLayout Orientation="Vertical">
+                <Label Text="Bar Chart" Margin="2" />
+                <StackLayout Orientation="Horizontal">
+                    <Button Command="{Binding BtnLoadGraph}" x:Name="btnLoadGraph" Text="Load Graph" 
+                                Margin="2" HorizontalOptions="Start" VerticalOptions="Start"/>
+                </StackLayout>
+                <oxy:PlotView Model="{Binding GraphModel}" HorizontalOptions="StartAndExpand"
+                                  VerticalOptions="StartAndExpand" Margin="2"
+                                  HeightRequest="300" WidthRequest="300"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

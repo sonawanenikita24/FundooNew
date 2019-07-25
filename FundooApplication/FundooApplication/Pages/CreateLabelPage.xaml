@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FundooApplication.Pages.CreateLabelPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="White">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <ImageButton Source="cross.png" Grid.Row="0" Grid.Column="0" WidthRequest="5" HeightRequest="5" BackgroundColor="White" Padding="10,10,15,10"/>
+                <Entry x:Name="txtLabel" Grid.Row="0"  Grid.Column="1" Grid.ColumnSpan="3" Placeholder="Create new label" BackgroundColor="White" />
+                <ImageButton Source="Right.png" Grid.Row="0" Grid.Column="4" Padding="10,10,15,10" BackgroundColor="White" Clicked="ImageButton_Clicked"/>
+            </Grid>
+            <StackLayout HorizontalOptions="Center">
+                <ListView x:Name="lstLabels" 
+                      IsPullToRefreshEnabled="True" 
+                      RowHeight="55"
+                     SeparatorColor="Transparent" 
+                      ItemSelected="ListLabels_ItemSelected" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" 
+                                         BackgroundColor="White" 
+                                         x:Name="labelLayout">
+
+                                    <ImageButton Source="labelicon.png" 
+                                             BackgroundColor="White"
+                                            Padding="10,10,15,10"
+                                                    />
+
+                                    <Label Text="{Binding Noteslabel}" 
+                                       HorizontalOptions="CenterAndExpand" 
+                                       TextColor="Black" 
+                                               HorizontalTextAlignment="Center"
+                                       ></Label>
+
+                                    <Label Text="{Binding Labelkey}" 
+                                       IsVisible="False"/>
+
+                                    <ImageButton Source="labelediticon.png" 
+                                             BackgroundColor="White"  
+                                             Padding="10,10,15,10"
+                                                    />
+                                </StackLayout>
+
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+            <ScrollView>
+                <RelativeLayout>
+                    <StackLayout >
+                        <ScrollView Orientation="Vertical" VerticalOptions="StartAndExpand" HeightRequest="450">
+                            <StackLayout>
+                                <StackLayout x:Name="NoteDisplay">
+                                    <Label Text="Labels"/>
+                                    <Grid x:Name="LabelGrid" Margin="5" VerticalOptions="Center"></Grid>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                </RelativeLayout>
+            </ScrollView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

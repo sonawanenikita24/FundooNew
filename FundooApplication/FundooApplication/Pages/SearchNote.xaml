@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="FundooApplication.Pages.SearchNote">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Search note" FontSize="20"/>
+            <SearchBar x:Name="SearchNotes" Placeholder="Search Notes Here"
+                      TextChanged="SearchBar_TextChanged" WidthRequest="80" BackgroundColor="White"></SearchBar>
+            <Grid x:Name="OthersGridLayout">
+                <Frame>
+                    <ListView x:Name="Notelist" ItemTapped="NoteListItem_Tapped">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+
+                                <TextCell Text="{Binding Title}"
+                                  Detail="{Binding UserNote}">
+                                </TextCell>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

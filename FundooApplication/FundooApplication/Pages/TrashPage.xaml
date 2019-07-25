@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FundooApplication.Pages.TrashPage">
+    <ContentPage.Content>
+        <ScrollView>
+            <RelativeLayout>
+                <StackLayout Margin="8,5,0,10">
+                    <ScrollView Orientation="Vertical" VerticalOptions="CenterAndExpand" HeightRequest="480">
+                        <StackLayout>
+                            <StackLayout x:Name="NotesDisplay">
+                                <Label Text="Trashed"/>
+                                <Grid x:Name="TrashGridLayout"
+                                      Margin="5"
+                                      VerticalOptions="Center">
+                                </Grid>
+                            </StackLayout>
+                        </StackLayout>
+                    </ScrollView>
+                </StackLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage> 

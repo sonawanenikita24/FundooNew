@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+    x:Class="FundooApplication.Pages.RemindersPage">
+    <StackLayout Margin="12" Padding="24" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center">
+        <Grid x:Name="ReminderGrid" RowSpacing="0" ColumnSpacing="0">
+
+            <Grid.RowDefinitions>
+
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40" />
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Add reminder" 
+                   Grid.Row="0" 
+                   Grid.Column="0" 
+                   Grid.ColumnSpan="5" 
+                   FontAttributes="Bold" 
+                   FontSize="20"/>
+
+            <input:RadioButton Text="Time"
+                               x:Name="Time"
+                               Grid.Row="1"
+                               Grid.Column="0"
+                               Grid.ColumnSpan="4"
+                               Clicked="TimeButton_clicked"
+                               TextFontSize="20"/>
+            <input:RadioButton Text="place"
+                               x:Name="Place"
+                               Grid.Row="1"
+                               Grid.Column="5"
+                               Grid.ColumnSpan="4"
+                               Clicked="PlaceButton_clicked"
+                               TextFontSize="20"/>
+            <DatePicker x:Name="datepicker"
+                        Grid.Row="2" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="8"/>
+
+            <TimePicker x:Name="timepicker" 
+                        Grid.Row="3" 
+                        Grid.Column="0" 
+                        Grid.ColumnSpan="8"/>
+
+            <Picker x:Name="mypicker"
+                    Grid.Row="4" 
+                    Grid.Column="0"  
+                    Grid.ColumnSpan="8" />
+
+            <Button Text="Cancel" 
+                    x:Name="Cancel" 
+                    Grid.Row="5" 
+                    Grid.Column="2" 
+                    Grid.ColumnSpan="3" 
+                    Clicked="Cancel_Clicked"/>
+
+            <Button Text="Save" 
+                    x:Name="Save" 
+                    Grid.Row="5" 
+                    Grid.Column="5" 
+                    Grid.ColumnSpan="3" 
+                    Clicked="Save_Clicked"/>
+
+        </Grid>
+    </StackLayout>
+
+    </pages:PopupPage>

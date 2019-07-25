@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"  
+             x:Class="FundooApplication.Pages.PopUpPages.DeleteLabelPage" NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout Margin="10,15,10,10">
+            <StackLayout>
+                <ListView x:Name="lstLabels" 
+                          SeparatorColor="Transparent"
+                          IsPullToRefreshEnabled="True"
+                          RowHeight="55"
+                          ItemSelected="LstLabel_ItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" 
+                                         BackgroundColor="White" 
+                                         x:Name="labelLayout">
+
+                                    <ImageButton Source="labelicon.png" 
+                                                 Padding="10,10,15,10" 
+                                                 BackgroundColor="White" 
+                                                 HorizontalOptions="Start"/>
+
+                                    <Label Text="{Binding Noteslabel}" 
+                                           HorizontalOptions="CenterAndExpand" 
+                                           TextColor="Black"
+                                           HorizontalTextAlignment="Center"/>
+
+                                    <!--<input:CheckBox Text="{Binding key}" Type="Check" Color="White" CheckChanged="CheckBox_CheckChanged" TextColor="White" />-->
+
+                                    <Label Text="{Binding LabelKey}"
+                                           IsVisible="False"/>
+
+                                    <input:CheckBox Type="Check"
+                                                    BackgroundColor="AntiqueWhite"
+                                                    CheckChanged="CheckBox_CheckChanged_1"
+                                                    />
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

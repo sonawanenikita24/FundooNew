@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FundooApplication.Pages.NotesPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="Searchbar" Text="Search Note" Priority="0" Clicked="SearchNote_Clicked"/>
+        <ToolbarItem x:Name="profile" Clicked="ProfileClicked"  ></ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        <RelativeLayout>
+
+            <ScrollView Orientation="Vertical" 
+                        VerticalOptions="StartAndExpand" 
+                        HeightRequest="480">
+                <StackLayout>
+                    <StackLayout>
+                        <Label x:Name="Pinned" 
+                               FontAttributes="None"
+                               TextColor="DarkGray"></Label>
+                        <Grid x:Name="PinnedGridLayout"></Grid>
+                    </StackLayout>
+                    <StackLayout>
+                        <Label x:Name="OTHERS" 
+                               FontAttributes="None" 
+                               TextColor="DarkGray"></Label>
+                        <Grid x:Name="OthersGridLayout"></Grid>
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+
+
+
+            <StackLayout VerticalOptions="End" BackgroundColor="Transparent"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.1}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=0.9}">
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Text=" Take a note......"  TextColor="Black" 
+                            Clicked="CreateNoteTapped" 
+                            BackgroundColor="White"  />
+                    <!--  <Label BackgroundColor="White" >
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Take a note..."
+                                  TextColor="DarkGray"
+                                  FontSize="15"
+                                  FontAttributes="Bold">
+                                    <Span.GestureRecognizers>
+                                        <TapGestureRecognizer
+                                          Tapped="CreateNoteTapped">
+                                        </TapGestureRecognizer>
+                                    </Span.GestureRecognizers>
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>-->
+
+
+
+                    <!--<ImageButton x:Name="checkbox"
+                                     Source="checkbox.png"
+                                          HeightRequest="15"
+                                         WidthRequest="50"
+                                     Clicked="Checkbox_imageButton_clicked"
+                                        Padding="5,10,5,10"></ImageButton>
+                    <ImageButton x:Name="brush"
+                                     Source="brush.png"
+                                         HeightRequest="15"
+                                         WidthRequest="50"
+                                     Clicked="Drawing_button_clicked"
+                                      Padding="5,10,5,10"/>
+                    <ImageButton x:Name="microphone"
+                                     Source="microphone.png"
+                                         HeightRequest="15"
+                                         WidthRequest="50"
+                                     Clicked="Recording_button_clicked"
+                                        Padding="5,10,5,10"/>
+                    <ImageButton x:Name="image"
+                                     Source="imageinsert.png"
+                                         HeightRequest="15"
+                                         WidthRequest="50"
+                                     Clicked="Image_button_clicked"
+                                      Padding="5,10,5,10"/>-->
+                </StackLayout>
+            </StackLayout>
+        </RelativeLayout>
+    </ContentPage.Content>
+</ContentPage>

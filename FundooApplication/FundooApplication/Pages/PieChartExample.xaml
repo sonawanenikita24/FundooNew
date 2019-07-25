@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:oxy="clr-namespace:OxyPlot.Xamarin.Forms;assembly=OxyPlot.Xamarin.Forms"
+             x:Class="FundooApplication.Pages.PieChartExample">
+    <StackLayout Orientation="Vertical">
+        <ScrollView Orientation="Both">
+            <StackLayout Orientation="Vertical" WidthRequest="1000" >
+                <Label Text="Xamarin Forms - Pie Charts Application" Margin="2" />
+                <Button Command="{Binding ButtonPieGraph}" x:Name="btnLoadGraph" Text="Load Piechart" Margin="2"
+HorizontalOptions="Start" VerticalOptions="Start"/>
+                <oxy:PlotView Model="{Binding PieModel}" HorizontalOptions="Start"
+VerticalOptions="StartAndExpand" Margin="2"
+HeightRequest="500" WidthRequest="700"/>
+
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+
+</ContentPage>

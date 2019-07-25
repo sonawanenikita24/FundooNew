@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:input="clr-namespace:Plugin.InputKit.Shared.Controls;assembly=Plugin.InputKit"
+             x:Class="FundooApplication.Pages.PopUpPages.CollaboratorPage">
+    <ContentPage.Content>
+
+
+        <Grid RowSpacing="0" ColumnSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="40"/>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+
+            </Grid.ColumnDefinitions>
+
+
+
+            <ImageButton Source="cross.png" 
+                   HeightRequest="5" 
+                   WidthRequest="5" 
+                   Grid.Row="0" 
+                   x:Name="exit"
+                   Grid.Column="0" 
+                   BackgroundColor="White"
+                   Padding="10,10,15,10"></ImageButton>
+            <Label Text="Collaborators"  Grid.Row="0" 
+                   Grid.Column="3" 
+                   Grid.ColumnSpan="8" FontSize="Large"></Label>
+
+            <Button Text="Save" Grid.Row="0" Grid.Column="8"  
+                    Grid.ColumnSpan="3" x:Name="savebtn"
+                    FontSize="Large" BackgroundColor="White"  Clicked="Savebtn_Clicked"/>
+
+            <!--<Image Source="nikita.png" 
+                       HeightRequest="40"   
+                       WidthRequest="40" 
+                       Grid.Row="1" 
+                       Grid.Column="1"/>-->
+
+            <Label Text="sonawanenikita2@gmail.com" 
+                       Grid.ColumnSpan="8" 
+                       TextColor="Black" 
+                       FontAttributes="Bold"
+                       Grid.Row="1" 
+                       Grid.Column="2"
+                       FontSize="Medium"></Label>
+
+            <Image Source="Accountphoto" 
+                   HeightRequest="40"
+                   WidthRequest="40"
+                   Grid.Row="2" 
+                   Grid.Column="1" ></Image>
+            <input:AutoCompleteEntry TextColor="Black" 
+                                     Annotation="Email" 
+                                     x:Name="txtMail" 
+                                     IsRequired="True" 
+                                     Placeholder="Person or email to share with"
+                                     Grid.Row="2"
+                                     Grid.Column="2"
+                                     Grid.ColumnSpan="8"/>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

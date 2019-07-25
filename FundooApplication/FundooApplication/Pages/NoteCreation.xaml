@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FundooApplication.Pages.NoteCreation" NavigationPage.HasNavigationBar="True">
+    <ContentPage.Content>
+        <!-- <StackLayout>
+            <StackLayout Margin="10,35,10,10">
+                <Entry x:Name="Title" Placeholder="Title" PlaceholderColor="DarkGray" FontSize="25" TextColor="Black"/>
+                <Editor x:Name="Note" Placeholder="Note" PlaceholderColor="DarkGray" FontSize="18" TextColor="Black"></Editor>
+            </StackLayout>-->
+
+        <StackLayout Margin="10,10,10,10">
+
+            <StackLayout Spacing="5" Orientation="Vertical" VerticalOptions="StartAndExpand" Padding="10">
+                <StackLayout>
+
+                    <Image x:Name="ImageChoosed" HeightRequest="200"></Image>
+                    <Entry x:Name="Title"
+                           FontAttributes="Bold"
+                           FontSize="20"
+                           Placeholder="Title">
+                    </Entry>
+                </StackLayout>
+
+                <StackLayout>
+                    <Editor x:Name="Note" Placeholder="Note" FontSize="15" AutoSize="TextChanges"/>
+
+                    <StackLayout x:Name="layout"/>
+                </StackLayout>
+            </StackLayout>
+
+
+            <StackLayout VerticalOptions="End"
+                         BackgroundColor="Transparent"
+                         RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.1}"
+                         RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=1}"
+                         RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property= Height, Factor=0.90}">
+
+                <StackLayout Orientation="Horizontal" BackgroundColor="Transparent">
+                    <ImageButton x:Name="ListView"
+                                 Source="CreateLabel.png"
+                                 HeightRequest="30"
+                                 WidthRequest="40"
+                                 Padding="5"
+                                 BackgroundColor="Transparent"
+                                 Clicked="ListViewClicked"/>
+
+                    <ImageButton x:Name="MenuButton"
+                                 Source="menu.png"
+                                 HeightRequest="20"
+                                 WidthRequest="20"
+                                 BackgroundColor="Transparent"
+                                 Clicked="OnPopMenuButton_Clicked"/>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

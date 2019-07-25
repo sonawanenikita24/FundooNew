@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FundooApplication.Pages.CategoryNote">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Button x:Name="BarChart" Text="BarChart" WidthRequest="150" HorizontalOptions="Center" Clicked="BarchartButton_clicked"/>
+            <Button x:Name="PieChart" Text="PieChart" WidthRequest="150" HorizontalOptions="Center" Clicked="PieChartButton_Clicked"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

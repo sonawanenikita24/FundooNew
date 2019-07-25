@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FundooApplication.Pages.RegistrationPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+                <StackLayout BackgroundColor="White" >
+                    <StackLayout Margin="12,10,20,0" Orientation="Horizontal" HorizontalOptions="Start" Spacing="1">
+                        <Label Text="F" FontSize="30" TextColor="Blue"   HorizontalOptions="Start" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                        <Label Text="U" FontSize="30" TextColor="Red"    HorizontalOptions="Start" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                        <Label Text="N" FontSize="30" TextColor="Yellow" HorizontalOptions="Start" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                        <Label Text="D" FontSize="30" TextColor="Blue"   HorizontalOptions="Start" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                        <Label Text="O" FontSize="30" TextColor="Green"  HorizontalOptions="Start" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                        <Label Text="O" FontSize="30" TextColor="Red"    HorizontalOptions="Start" VerticalTextAlignment="Center" FontAttributes="Bold"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="10,0,10,10" BackgroundColor="White" Spacing="1">
+                        <Label Text="Create your Fundoo Account"
+                               FontSize="20"
+                               TextColor="Black"
+                               HorizontalOptions="Start"
+                               VerticalOptions="Center"/>
+                    </StackLayout>
+
+                    <StackLayout Margin="10,0,10,5" BackgroundColor="White" Spacing="5">
+                        <Frame Padding="3" CornerRadius="5" BorderColor="DarkGray" Margin="5,10,5,10">
+                            <Entry x:Name="First_name" 
+                               Placeholder="First Name"
+                               FontSize="20"
+                               PlaceholderColor="DarkGray"/>
+                        </Frame>
+
+                        <Frame Padding="3" CornerRadius="5" BorderColor="DarkGray" Margin="5,10,5,10">
+                            <Entry x:Name="Last_name" 
+                               Placeholder="Last Name"
+                               FontSize="20"
+                               PlaceholderColor="DarkGray"/>
+                        </Frame>
+
+                        <Frame Padding="3" CornerRadius="5" BorderColor="DarkGray" Margin="5,10,5,10">
+                            <Entry x:Name="UserName" 
+                                   Placeholder="username                @gmail.com" 
+                                   FontSize="20" 
+                                   PlaceholderColor="DarkGray"/>
+                        </Frame>
+
+                        <StackLayout Margin="10,0,2,2">
+                            <Label Text=" you can use letters,numbers or periods"
+                               FontSize="15"
+                               TextColor="DarkGray"
+                               HorizontalOptions="Start"
+                               VerticalTextAlignment="Start"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Margin="10,0,0,10" BackgroundColor="White" >
+
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Padding="3" CornerRadius="5" BorderColor="DarkGray" Margin="5,10,5,10">
+                                <Entry x:Name="Password"
+                           Placeholder="Password"
+                           WidthRequest="250"
+                           PlaceholderColor="DarkGray"
+                           IsPassword="True" />
+                            </Frame>
+
+                            <Image Source="hide_image.png" HorizontalOptions="End" Margin="0,0,5,0">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer
+                                            Tapped="Image_button_clicked"
+                                            NumberOfTapsRequired="1"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+
+
+                        <StackLayout Margin="10,0,2,2">
+                            <Label Text=" Use 8 or more characters with a mix of  letters,numbers and symbols"
+                               FontSize="15"
+                               TextColor="DarkGray"
+                               HorizontalOptions="Start"
+                               VerticalTextAlignment="Start"/>
+
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,0" Orientation="Horizontal" >
+                            <Frame Padding="3" CornerRadius="5" BorderColor="DarkGray" Margin="5,10,5,10">
+                                <Entry x:Name="ConfirmPassword" 
+                           Placeholder="Confirm"
+                           WidthRequest="250"
+                           PlaceholderColor="DarkGray"
+                           IsPassword="True"/>
+                            </Frame>
+                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout Margin="10,0,10,5" BackgroundColor="White"  Orientation="Horizontal" Spacing="100">
+                        <Label VerticalOptions="CenterAndExpand" 
+                               HorizontalOptions="CenterAndExpand"
+                          
+                           FontSize="18">
+                            <Label.FormattedText>
+                                <FormattedString>
+                                    <Span Text="Sign in instead"
+                                      TextColor="Blue"
+                                      TextDecorations="Underline">
+                                        <Span.GestureRecognizers>
+                                            <TapGestureRecognizer
+                                            Tapped="SignInClicked"/>
+                                        </Span.GestureRecognizers>
+                                    </Span>
+                                </FormattedString>
+                            </Label.FormattedText>
+                        </Label>
+
+                        <Button 
+                            x:Name="Submit" 
+                            Text="Register"
+                            WidthRequest="110"
+                            BorderColor="Black"
+                            BackgroundColor="Blue"
+                            TextColor="White"
+                            Clicked="Submit_button_clicked"
+                            />
+                    </StackLayout>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

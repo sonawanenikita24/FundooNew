@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FundooApplication.Pages.TrashUpdatePage" NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Content>
+        <StackLayout Margin="10,35,10,10" HorizontalOptions="Start">
+            <RelativeLayout>
+                <StackLayout Margin="10,0,10,10" Spacing="30">
+                    <Label x:Name="NoteTitle" Text="{Binding NoteTitle}" TextColor="Black" FontAttributes="Bold" FontSize="25"/>
+                    <Label x:Name="NoteText" Text="{Binding NoteText}" TextColor="Black" FontSize="20"/>
+                </StackLayout>
+
+                <StackLayout VerticalOptions="End" HorizontalOptions="End" BackgroundColor="White"
+                RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,Property=Width,Factor=1}"
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.90}"
+                RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,Property=Height,Factor=0.1}">
+
+                    <StackLayout>
+                        <ImageButton Source="menu.png" HeightRequest="20" WidthRequest="25" BackgroundColor="White" Clicked="MenuButtonClicked"/>
+                    </StackLayout>
+
+                </StackLayout>
+            </RelativeLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
