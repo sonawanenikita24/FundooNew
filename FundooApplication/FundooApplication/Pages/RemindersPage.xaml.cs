@@ -1,18 +1,19 @@
-﻿using Rg.Plugins.Popup.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="RemindersPage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RemindersPage 
-	{
+    using System;
+    using Rg.Plugins.Popup.Services;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class RemindersPage
+    {
         /// <summary>
         /// Initializes a new instance of the <see cref="RemindersPage"/> class.
         /// </summary>
@@ -65,6 +66,19 @@ namespace FundooApplication.Pages
         private void PlaceButton_clicked(object sender, EventArgs e)
         {
             //// code
+        }
+
+        /// <summary>
+        /// Called when [back button pressed].
+        /// </summary>
+        /// <returns></returns>
+        protected override bool OnBackButtonPressed()
+        {
+            DisplayAlert("Alert", "Please logout first from app", "Ok");
+
+            ////go to Edit page with that note id
+            Navigation.PushAsync(new LogoutPage());
+            return base.OnBackButtonPressed();
         }
     }
 }

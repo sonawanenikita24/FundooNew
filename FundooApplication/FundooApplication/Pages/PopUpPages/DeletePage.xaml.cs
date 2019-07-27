@@ -1,21 +1,22 @@
-﻿using FundooApplication.Model;
-using FundooApplication.Repository;
-using Plugin.Toast;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using static FundooApplication.Model.TypeOfNote;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="DeletePage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages.PopUpPages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DeletePage : ContentPage
-	{
+    using System;
+    using FundooApplication.Model;
+    using FundooApplication.Repository;
+    using Plugin.Toast;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+    using static FundooApplication.Model.TypeOfNote;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DeletePage : ContentPage
+    {
         /// <summary>
         /// current note type
         /// </summary>

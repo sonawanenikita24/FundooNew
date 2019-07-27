@@ -1,11 +1,22 @@
-﻿using FundooApplication.Pages;
-using System;
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="App.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace FundooApplication
 {
+    using FundooApplication.Pages;
+    using System;
+
+    /// <summary>
+    /// Entry point for application
+    /// </summary>
+    /// <seealso cref="Xamarin.Forms.Application" />
     public partial class App : Application
     {
         /// <summary>

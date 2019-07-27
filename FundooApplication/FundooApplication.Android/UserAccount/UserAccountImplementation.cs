@@ -1,23 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Android.App;
-using Android.Content;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
-using Firebase.Auth;
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="UserAccountImplementation.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 using FundooApplication.Droid.UserAccount;
-using FundooApplication.Interfaces;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(UserAccountImplementation))]
 
 namespace FundooApplication.Droid.UserAccount
 {
+    using System;
+    using System.Threading.Tasks;
+    using Firebase.Auth;
+    using FundooApplication.Interfaces;
+
     /// <summary>
     /// implement interface method here
     /// </summary>

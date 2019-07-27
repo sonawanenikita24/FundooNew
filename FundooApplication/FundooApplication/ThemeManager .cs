@@ -1,10 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="ThemeManager.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication
 {
+    using System;
+    using Xamarin.Forms;
+
     /// <summary>
     /// Manages theme of the page
     /// </summary>

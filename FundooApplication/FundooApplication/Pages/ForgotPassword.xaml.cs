@@ -1,19 +1,20 @@
-﻿using FundooApplication.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="ForgotPassword.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ForgotPassword : ContentPage
-	{
+    using System;
+    using System.Text.RegularExpressions;
+    using FundooApplication.Interfaces;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ForgotPassword : ContentPage
+    {
         /// <summary>
         /// The gmail pattern
         /// </summary>

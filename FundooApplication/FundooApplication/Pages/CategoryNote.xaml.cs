@@ -1,17 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="CategoryNote.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class CategoryNote : ContentPage
-	{
+    using System;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class CategoryNote : ContentPage
+    {
         /// <summary>
         /// Initializes a new instance of the <see cref="CategoryNote"/> class.
         /// </summary>
@@ -38,6 +39,19 @@ namespace FundooApplication.Pages
         private void PieChartButton_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new PieChartExample());
+        }
+
+        /// <summary>
+        /// Called when [back button pressed].
+        /// </summary>
+        /// <returns></returns>
+        protected override bool OnBackButtonPressed()
+        {
+            DisplayAlert("Alert", "Please logout first from app", "Ok");
+
+            ////go to Edit page with that note id
+            Navigation.PushAsync(new LogoutPage());
+            return base.OnBackButtonPressed();
         }
     }
 }

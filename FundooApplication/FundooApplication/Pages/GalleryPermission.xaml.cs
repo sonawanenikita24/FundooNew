@@ -1,23 +1,24 @@
-﻿using FundooApplication.Helper;
-using FundooApplication.Repository;
-using Plugin.Media;
-using Plugin.Media.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="GalleryPermission.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class GalleryPermission : ContentPage
-	{
+    using System;
+    using System.Diagnostics;
+    using System.IO;
+    using FundooApplication.Helper;
+    using FundooApplication.Repository;
+    using Plugin.Media;
+    using Plugin.Media.Abstractions;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class GalleryPermission : ContentPage
+    {
         /// <summary>
         /// The helpers is instance of firebase helper class
         /// </summary>

@@ -1,20 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="Pink.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Themes
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Pink : ResourceDictionary
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Pink : ResourceDictionary
     {
-		public Pink ()
-		{
-			InitializeComponent ();
-		}
-	}
+        public Pink()
+        {
+            InitializeComponent();
+        }
+    }
 }

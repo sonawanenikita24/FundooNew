@@ -1,20 +1,21 @@
-﻿using FundooApplication.Interfaces;
-using FundooApplication.Repository;
-using Plugin.Toast;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="DeleteForeeverPage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages.DeletePopUp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DeleteForeeverPage : ContentPage
-	{
+    using System;
+    using FundooApplication.Interfaces;
+    using FundooApplication.Repository;
+    using Plugin.Toast;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DeleteForeeverPage : ContentPage
+    {
         /// <summary>
         /// The note key
         /// </summary>

@@ -1,7 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="TrashDataModel.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Model
 {
     /// <summary>

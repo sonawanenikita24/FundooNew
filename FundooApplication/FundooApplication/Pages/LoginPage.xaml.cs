@@ -1,17 +1,21 @@
-﻿using System;
-using System.Text.RegularExpressions;
-using FundooApplication.Themes;
-using FundooApplication.Interfaces;
-using FundooApplication;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="LoginPage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class LoginPage : ContentPage
-	{
+    using System;
+    using System.Text.RegularExpressions;
+    using FundooApplication.Interfaces;
+    using FundooApplication;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class LoginPage : ContentPage
+    {
         /// <summary>
         /// The tap count
         /// </summary>
@@ -155,6 +159,8 @@ namespace FundooApplication.Pages
                 }
 
                 loading.IsEnabled = true;
+                loading.IsRunning = true;
+                loading.IsVisible = true;
 
                 if (this.Checkfield())
                 {
@@ -189,6 +195,8 @@ namespace FundooApplication.Pages
                 }
 
                 loading.IsEnabled = false;
+                loading.IsRunning = false;
+                loading.IsVisible = false;
             }
             catch (Exception)
             {

@@ -1,14 +1,20 @@
-﻿using FundooApplication.Model;
-using FundooApplication.Service;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="GoogleViewModel.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.ViewModels
 {
+    using FundooApplication.Model;
+    using FundooApplication.Service;
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Runtime.CompilerServices;
+    using System.Text;
+    using System.Threading.Tasks;
+
     /// <summary>
     /// Model class for google to get profile info
     /// </summary>

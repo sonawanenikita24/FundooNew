@@ -1,18 +1,20 @@
-﻿using FundooApplication.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="DeleteAndRestorePopUpPage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages.DeletePopUp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DeleteAndRestorePopUpPage 
-	{
+    using System;
+    using System.Collections.Generic;
+    using FundooApplication.Model;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DeleteAndRestorePopUpPage
+    {
         /// <summary>
         /// The page items
         /// </summary>

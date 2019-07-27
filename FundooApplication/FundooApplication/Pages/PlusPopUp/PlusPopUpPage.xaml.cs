@@ -1,15 +1,17 @@
-﻿using FundooApplication.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="PlusPopUpPage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages.PlusPopUp
 {
+    using System;
+    using System.Collections.Generic;
+    using FundooApplication.Model;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
     /// <summary>
     /// pop up menu when plus button clicked
     /// </summary>

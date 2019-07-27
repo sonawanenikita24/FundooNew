@@ -1,17 +1,21 @@
-﻿using Firebase.Database;
-using Firebase.Database.Query;
-using FundooApplication.Interfaces;
-using FundooApplication.Model;
-using Plugin.Toast;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-using static FundooApplication.Model.TypeOfNote;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="UserRepository.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Repository
 {
+    using System;
+    using System.Threading.Tasks;
+    using Firebase.Database;
+    using Firebase.Database.Query;
+    using FundooApplication.Interfaces;
+    using FundooApplication.Model;
+    using Plugin.Toast;
+    using Xamarin.Forms;
+    using static FundooApplication.Model.TypeOfNote;
+
     /// <summary>
     /// Database layer defination
     /// </summary>

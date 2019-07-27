@@ -1,21 +1,23 @@
-﻿using FundooApplication.Model;
-using FundooApplication.Repository;
-using FundooApplication.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using static FundooApplication.Model.TypeOfNote;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="NotesPage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class NotesPage : ContentPage
-	{
+    using System;
+    using System.Collections.Generic;
+    using FundooApplication.Model;
+    using FundooApplication.Repository;
+    using FundooApplication.ViewModels;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+    using static FundooApplication.Model.TypeOfNote;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class NotesPage : ContentPage
+    {
         /// <summary>
         /// The x,y
         /// </summary>

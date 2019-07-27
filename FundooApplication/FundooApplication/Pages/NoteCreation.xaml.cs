@@ -1,22 +1,24 @@
-﻿using FundooApplication.Model;
-using FundooApplication.Pages.PlusPopUp;
-using FundooApplication.Pages.PopUpPages;
-using FundooApplication.Repository;
-using Rg.Plugins.Popup.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Essentials;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="NoteCreation.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class NoteCreation : ContentPage
-	{
+    using System;
+    using FundooApplication.Model;
+    using FundooApplication.Pages.PlusPopUp;
+    using FundooApplication.Pages.PopUpPages;
+    using FundooApplication.Repository;
+    using Rg.Plugins.Popup.Services;
+    using Xamarin.Essentials;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class NoteCreation : ContentPage
+    {
         /// <summary>
         /// The note key
         /// </summary>

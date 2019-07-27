@@ -1,19 +1,21 @@
-﻿using FundooApplication.Model;
-using FundooApplication.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Essentials;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="SharePage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages.PopUpPages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class SharePage : ContentPage
-	{
+    using System.Threading.Tasks;
+    using FundooApplication.Model;
+    using FundooApplication.Repository;
+    using Xamarin.Essentials;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class SharePage : ContentPage
+    {
         /// <summary>
         /// The note key
         /// </summary>

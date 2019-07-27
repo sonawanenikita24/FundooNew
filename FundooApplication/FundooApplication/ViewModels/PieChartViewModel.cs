@@ -1,17 +1,23 @@
-﻿using FundooApplication.Model;
-using FundooApplication.Repository;
-using OxyPlot;
-using OxyPlot.Series;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
-using System.Windows.Input;
-using Xamarin.Forms;
-using static FundooApplication.Model.TypeOfNote;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="PieChartViewModel.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.ViewModels
 {
+    using FundooApplication.Model;
+    using FundooApplication.Repository;
+    using OxyPlot;
+    using OxyPlot.Series;
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Text;
+    using System.Windows.Input;
+    using Xamarin.Forms;
+    using static FundooApplication.Model.TypeOfNote;
+
     /// <summary>
     /// model class for pie chart
     /// </summary>

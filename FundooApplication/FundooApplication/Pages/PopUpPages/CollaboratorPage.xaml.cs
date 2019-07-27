@@ -1,23 +1,23 @@
-﻿using Firebase.Database;
-using Firebase.Database.Query;
-using FundooApplication.Interfaces;
-using FundooApplication.Model;
-using FundooApplication.Repository;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="CollaboratorPage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages.PopUpPages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class CollaboratorPage : ContentPage
-	{
+    using System.Collections.ObjectModel;
+    using Firebase.Database;
+    using Firebase.Database.Query;
+    using FundooApplication.Interfaces;
+    using FundooApplication.Model;
+    using FundooApplication.Repository;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class CollaboratorPage : ContentPage
+    {
         /// <summary>
         /// The notes repository instance of note repository
         /// </summary>

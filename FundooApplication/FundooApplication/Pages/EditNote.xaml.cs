@@ -1,25 +1,28 @@
-﻿using Firebase.Database;
-using FundooApplication.Interfaces;
-using FundooApplication.Model;
-using FundooApplication.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Rg.Plugins.Popup.Services;
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using static FundooApplication.Model.TypeOfNote;
-using Plugin.Toast;
-using FundooApplication.Pages.PlusPopUp;
-using FundooApplication.Pages.PopUpPages;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="EditNote.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class EditNote : ContentPage
-	{
+    using System;
+    using System.Collections.Generic;
+    using FundooApplication.Interfaces;
+    using FundooApplication.Model;
+    using FundooApplication.Pages.PlusPopUp;
+    using FundooApplication.Pages.PopUpPages;
+    using FundooApplication.Repository;
+    using FundooApplication.ViewModels;
+    using Rg.Plugins.Popup.Services;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+    using static FundooApplication.Model.TypeOfNote;
+    using Plugin.Toast;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class EditNote : ContentPage
+    {
         /// <summary>
         /// The helper
         /// </summary>
@@ -190,15 +193,16 @@ namespace FundooApplication.Pages
         {
             try
             {
-                string userid = DependencyService.Get<IDatabaseInterface>().GetId();
-
-                Note note = await this.FirebaseHelperVar.GetNoteByNoteId(this.NoteKey, userid);
+                //// get the note data
+                var note = await this.FirebaseHelperVar.GetUserNote(this.NoteKey);
                 TitleText.Text = note.Title;
                 NoteText.Text = note.UserNote;
+
                 Lists = note.LabelsList;
                 List1 = note.CollaboratosList;
 
-                this.BackgroundColor = Color.White;
+                this.CurrentNotetype = note.NoteType;
+                this.BackgroundColor = Color.FromHex(FrameColorSetter.GetHexColor(note));
                 ToolbarItems.Clear();
 
                 if (note.NoteType == NoteType.isNote)
@@ -273,53 +277,53 @@ namespace FundooApplication.Pages
             }
         }
 
-      /*  /// <summary>
-        /// add labels inside the frame 
-        /// </summary>
-        /// <param name="list">The list.</param>
-        public async void CollaboratorsFrame(IList<string> list)
-        {
-            var userid = DependencyService.Get<IDatabaseInterface>().GetId();
-            CollaboratorRepository firebasedata = new CollaboratorRepository();
-            var alllabels = await firebasedata.GetAllcollaborators();
+        /*  /// <summary>
+          /// add labels inside the frame 
+          /// </summary>
+          /// <param name="list">The list.</param>
+          public async void CollaboratorsFrame(IList<string> list)
+          {
+              var userid = DependencyService.Get<IDatabaseInterface>().GetId();
+              CollaboratorRepository firebasedata = new CollaboratorRepository();
+              var alllabels = await firebasedata.GetAllcollaborators();
 
-            ////display labels
-            foreach (CollaboratorMadel model in alllabels)
-            {
-                foreach (var collboratorid in list)
-                {
-                    if (model.CKey.Equals(collboratorid))
-                    {
-                        var imagebutton = new ImageButton()
-                        {
-                            Source = "Accountphoto.png",
-                            VerticalOptions = LayoutOptions.Start,
-                            HorizontalOptions = LayoutOptions.Start
-                        };
+              ////display labels
+              foreach (CollaboratorMadel model in alllabels)
+              {
+                  foreach (var collboratorid in list)
+                  {
+                      if (model.CKey.Equals(collboratorid))
+                      {
+                          var imagebutton = new ImageButton()
+                          {
+                              Source = "Accountphoto.png",
+                              VerticalOptions = LayoutOptions.Start,
+                              HorizontalOptions = LayoutOptions.Start
+                          };
 
-                        ////add new label frame inside the note
-                        var labelFrame = new Frame
-                        {
+                          ////add new label frame inside the note
+                          var labelFrame = new Frame
+                          {
 
-                            Content = imagebutton,
-                            BorderColor = Color.Gray,
-                            BackgroundColor = this.BackgroundColor
-                        };
+                              Content = imagebutton,
+                              BorderColor = Color.Gray,
+                              BackgroundColor = this.BackgroundColor
+                          };
 
-                        Note note = await this.FirebaseHelperVar.GetNoteByNoteId(NoteKey, userid);
+                          Note note = await this.FirebaseHelperVar.GetNoteByNoteId(NoteKey, userid);
 
-                        note.NoteColor = this.noteBackgroundColor;
-                        layout1.Children.Add(labelFrame);
+                          note.NoteColor = this.noteBackgroundColor;
+                          layout1.Children.Add(labelFrame);
 
-                        var tapimage = new TapGestureRecognizer();
+                          var tapimage = new TapGestureRecognizer();
 
-                        tapimage.Tapped += Tapimage_Tapped;
+                          tapimage.Tapped += Tapimage_Tapped;
 
-                        imagebutton.GestureRecognizers.Add(tapimage);
-                    }
-                }
-            }
-        }*/
+                          imagebutton.GestureRecognizers.Add(tapimage);
+                      }
+                  }
+              }
+          }*/
 
         /// <summary>
         /// When overridden, allows application developers to customize behavior immediately prior to the <see cref="T:Xamarin.Forms.Page" /> becoming visible.
@@ -329,12 +333,20 @@ namespace FundooApplication.Pages
         /// </remarks>
         protected async override void OnAppearing()
         {
-            var userid = DependencyService.Get<IDatabaseInterface>().GetId();
-            var note = await this.FirebaseHelperVar.GetNoteByNoteId(this.NoteKey, userid);
-            var list = note.LabelsList;
-            this.LableFrames(list);
-           // var lists = note.CollaboratosList;
-          //  this.CollaboratorsFrame(lists);
+            try
+            {
+                base.OnAppearing();
+
+                var note = await this.FirebaseHelperVar.GetUserNote(this.NoteKey);
+                var list = note.LabelsList;
+                this.LableFrames(list);
+                // var lists = note.CollaboratosList;
+                //  this.CollaboratorsFrame(lists);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
 
@@ -344,22 +356,30 @@ namespace FundooApplication.Pages
         /// <remarks>
         /// To be added.
         /// </remarks>
-        /*  protected async override void OnDisappearing()
-          {           
-              try
-              {
-                  //// create note instance with updated value
-                  Note note = await this.FirebaseHelperVar.GetUserNote(this.NoteKey);
-                  //// calling updated function to update edited note in database
-                   await this.FirebaseHelperVar.UpdateUserNote(note, this.NoteKey);
-                  //// go back to note page
-                  base.OnDisappearing();               
-              }
-              catch (Exception ex)
-              {
-                  Console.WriteLine(ex.Message);
-              }
-          }*/
+        protected async override void OnDisappearing()
+        {
+            try
+            {
+                //// create note instance with updated value
+                Note note = await this.FirebaseHelperVar.GetUserNote(this.NoteKey);
+
+                Note notes = new Note()
+                {
+                    Title = TitleText.Text,
+                    UserNote = NoteText.Text,
+                    NoteType = note.NoteType
+                };
+
+                //// calling updated function to update edited note in database
+                await this.FirebaseHelperVar.UpdateUserNote(notes, this.NoteKey);
+                //// go back to note page
+                base.OnDisappearing();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
 
         /// <summary>
         /// Application developers can override this method to provide behavior when the back button is pressed.
@@ -380,9 +400,7 @@ namespace FundooApplication.Pages
                 {
                     Title = TitleText.Text,
                     UserNote = NoteText.Text,
-                    NoteColor = this.NoteBackgroundColor,
                     LabelsList = Lists
-
                 };
 
                 var result = this.FirebaseHelperVar.UpdateUserNote(note, this.NoteKey);

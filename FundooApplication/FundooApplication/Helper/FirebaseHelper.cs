@@ -1,12 +1,14 @@
-﻿using Firebase.Storage;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="FirebaseHelper.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Helper
 {
+    using System.IO;
+    using System.Threading.Tasks;
+    using Firebase.Storage;
     /// <summary>
     /// Firebase helper class contain method for add, update and delete image from firebase storage
     /// </summary>

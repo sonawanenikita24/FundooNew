@@ -1,22 +1,23 @@
-﻿using FundooApplication.Repository;
-using Plugin.Media;
-using Plugin.Media.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="ChooseImage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages.PlusPopUp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ChooseImage : ContentPage
-	{
+    using System;
+    using System.Diagnostics;
+    using System.IO;
+    using FundooApplication.Repository;
+    using Plugin.Media;
+    using Plugin.Media.Abstractions;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ChooseImage : ContentPage
+    {
         /// <summary>
         /// The file
         /// </summary>

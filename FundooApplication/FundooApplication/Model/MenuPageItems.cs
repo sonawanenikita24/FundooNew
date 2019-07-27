@@ -1,9 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="MenuPageItems.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Model
 {
+    using System;
+
     /// <summary>
     /// menu for taking image and text
     /// </summary>

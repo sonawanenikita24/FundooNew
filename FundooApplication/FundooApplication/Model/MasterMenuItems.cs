@@ -1,9 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="MasterMenuItems.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Model
 {
+    using System;
+
     /// <summary>
     /// Master menu items
     /// </summary>

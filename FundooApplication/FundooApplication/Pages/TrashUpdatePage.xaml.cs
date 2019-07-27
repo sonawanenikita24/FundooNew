@@ -1,22 +1,23 @@
-﻿using FundooApplication.Interfaces;
-using FundooApplication.Model;
-using FundooApplication.Pages.DeletePopUp;
-using FundooApplication.Repository;
-using Rg.Plugins.Popup.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="TrashUpdatePage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class TrashUpdatePage : ContentPage
-	{
+    using System;
+    using FundooApplication.Interfaces;
+    using FundooApplication.Model;
+    using FundooApplication.Pages.DeletePopUp;
+    using FundooApplication.Repository;
+    using Rg.Plugins.Popup.Services;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class TrashUpdatePage : ContentPage
+    {
         /// <summary>
         /// The note key
         /// </summary>
@@ -95,6 +96,19 @@ namespace FundooApplication.Pages
         private async void MenuButtonClicked(object sender, EventArgs e)
         {
             await PopupNavigation.Instance.PushAsync(new DeleteAndRestorePopUpPage(this.NoteKey));
+        }
+
+        /// <summary>
+        /// Called when [back button pressed].
+        /// </summary>
+        /// <returns></returns>
+        protected override bool OnBackButtonPressed()
+        {
+            DisplayAlert("Alert", "Please logout first from app", "Ok");
+
+            ////go to Edit page with that note id
+            Navigation.PushAsync(new LogoutPage());
+            return base.OnBackButtonPressed();
         }
     }
 }

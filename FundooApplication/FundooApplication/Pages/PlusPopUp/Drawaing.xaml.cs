@@ -1,20 +1,20 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="Drawaing.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages.PlusPopUp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Drawaing : ContentPage
-	{
-		public Drawaing (string noteid)
-		{
-			InitializeComponent ();
-		}
-	}
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Drawaing : ContentPage
+    {
+        public Drawaing(string noteid)
+        {
+            InitializeComponent();
+        }
+    }
 }

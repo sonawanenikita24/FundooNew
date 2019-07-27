@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Essentials;
-using Xamarin.Forms;
-using static FundooApplication.Model.TypeOfNote;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="Note.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Model
 {
+    using System.Collections.Generic;
+    using Xamarin.Essentials;
+    using Xamarin.Forms;
+    using static FundooApplication.Model.TypeOfNote;
+
     /// <summary>
     /// Note model class containing title and note
     /// </summary>

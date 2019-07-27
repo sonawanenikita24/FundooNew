@@ -1,18 +1,23 @@
-﻿using FundooApplication.Model;
-using FundooApplication.Repository;
-using OxyPlot;
-using OxyPlot.Axes;
-using OxyPlot.Series;
-using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Text;
-using System.Windows.Input;
-using Xamarin.Forms;
-using static FundooApplication.Model.TypeOfNote;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="MainPageModel.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.ViewModels
 {
+    using System;
+    using System.Collections.Generic;
+    using System.ComponentModel;
+    using System.Windows.Input;
+    using FundooApplication.Model;
+    using FundooApplication.Repository;
+    using OxyPlot;
+    using OxyPlot.Axes;
+    using OxyPlot.Series;
+    using Xamarin.Forms;
+    using static FundooApplication.Model.TypeOfNote;
+
     /// <summary>
     /// Page model input for bar graph and display bar graph model
     /// </summary>

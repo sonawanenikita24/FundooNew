@@ -1,19 +1,20 @@
-﻿using FundooApplication.Model;
-using FundooApplication.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="CreateLabelPage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class CreateLabelPage : ContentPage
-	{
+    using System;
+    using FundooApplication.Model;
+    using FundooApplication.Repository;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class CreateLabelPage : ContentPage
+    {
         /// <summary>
         /// The label helper is instance of Label Helper class which is use for storing label in firebase
         /// </summary>

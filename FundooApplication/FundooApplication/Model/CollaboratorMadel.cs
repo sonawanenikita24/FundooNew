@@ -1,13 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="CollaboratorMadel.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Model
 {
     public class CollaboratorMadel
-    {/// <summary>
-     /// The sender mail
-     /// </summary>
+    {
+        /// <summary>
+        /// The sender mail
+        /// </summary>
         private string senderMail;
 
         /// <summary>

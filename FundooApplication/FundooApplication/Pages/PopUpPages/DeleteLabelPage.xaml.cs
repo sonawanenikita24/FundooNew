@@ -1,20 +1,21 @@
-﻿using FundooApplication.Interfaces;
-using FundooApplication.Model;
-using FundooApplication.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="DeleteLabelPage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages.PopUpPages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class DeleteLabelPage : ContentPage
-	{
+    using System;
+    using FundooApplication.Interfaces;
+    using FundooApplication.Model;
+    using FundooApplication.Repository;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class DeleteLabelPage : ContentPage
+    {
         /// <summary>
         /// The user id
         /// </summary>

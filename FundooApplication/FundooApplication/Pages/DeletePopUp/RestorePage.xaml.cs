@@ -1,22 +1,22 @@
-﻿using FundooApplication.Interfaces;
-using FundooApplication.Model;
-using FundooApplication.Repository;
-using Plugin.Toast;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using static FundooApplication.Model.TypeOfNote;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="RestorePage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages.DeletePopUp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class RestorePage : ContentPage
-	{
+    using FundooApplication.Interfaces;
+    using FundooApplication.Model;
+    using FundooApplication.Repository;
+    using Plugin.Toast;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+    using static FundooApplication.Model.TypeOfNote;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class RestorePage : ContentPage
+    {
         /// <summary>
         /// The note key
         /// </summary>

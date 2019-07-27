@@ -1,18 +1,20 @@
-﻿using FundooApplication.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="PopUpPage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages.PopUpPages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PopUpPage 
-	{
+    using System;
+    using System.Collections.Generic;
+    using FundooApplication.Model;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class PopUpPage
+    {
         /// <summary>
         /// The menu item list
         /// </summary>
@@ -157,7 +159,7 @@ namespace FundooApplication.Pages.PopUpPages
 
             return this.Menuitemlist;
         }
-       
+
 
         /// <summary>
         /// Handles the Clicked event of the SkyBlue control.

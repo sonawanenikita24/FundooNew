@@ -1,16 +1,21 @@
-﻿using Firebase.Database;
-using Firebase.Database.Query;
-using FundooApplication.Interfaces;
-using FundooApplication.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="CollaboratorRepository.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Repository
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Firebase.Database;
+    using Firebase.Database.Query;
+    using FundooApplication.Interfaces;
+    using FundooApplication.Model;
+    using Xamarin.Forms;
+
     public class CollaboratorRepository
     {
         /// <summary>

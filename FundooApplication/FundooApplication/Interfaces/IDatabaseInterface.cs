@@ -4,10 +4,10 @@
 // </copyright>
 // <creater name="Nikita Sonawane"/>
 //------------------------------------------------------------------------------------------------------------------
-using System.Threading.Tasks;
-
 namespace FundooApplication.Interfaces
 {
+    using System.Threading.Tasks;
+
     /// <summary>
     /// database interface
     /// </summary>

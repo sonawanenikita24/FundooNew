@@ -1,16 +1,21 @@
-﻿using Firebase.Database;
-using Firebase.Database.Query;
-using FundooApplication.Interfaces;
-using FundooApplication.Model;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="LabelRepository.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Repository
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Threading.Tasks;
+    using Firebase.Database;
+    using Firebase.Database.Query;
+    using FundooApplication.Interfaces;
+    using FundooApplication.Model;
+    using Xamarin.Forms;
+
     /// <summary>
     /// Label helper class to get label from database
     /// </summary>

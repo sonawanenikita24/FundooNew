@@ -1,11 +1,14 @@
-﻿using FundooApplication.Model;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Forms;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="FrameColorSetter.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.ViewModels
 {
+    using FundooApplication.Model;
+    using Xamarin.Forms;
+
     /// <summary>
     /// this FrameColorSetter class instance
     /// </summary>

@@ -1,18 +1,18 @@
-﻿using Plugin.Media.Abstractions;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="Camera.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages.PlusPopUp
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class Camera : ContentPage
-	{
+    using Plugin.Media.Abstractions;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class Camera : ContentPage
+    {
         /// <summary>
         /// The file
         /// </summary>

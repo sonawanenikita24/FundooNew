@@ -1,21 +1,22 @@
-﻿using Firebase.Database;
-using FundooApplication.Model;
-using FundooApplication.Repository;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="CreateCollaborator.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class CreateCollaborator : ContentPage
-	{
+    using System;
+    using System.Collections.ObjectModel;
+    using Firebase.Database;
+    using FundooApplication.Model;
+    using FundooApplication.Repository;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class CreateCollaborator : ContentPage
+    {
         /// <summary>
         /// The value
         /// </summary>
@@ -167,7 +168,7 @@ namespace FundooApplication.Pages
             {
                 var entity = (CollaboratorMadel)e.SelectedItem;
                 var key = entity.CKey;
-               // Navigation.PushAsync(new EditCollaborators(key));
+                // Navigation.PushAsync(new EditCollaborators(key));
             }
             catch (Exception ex)
             {

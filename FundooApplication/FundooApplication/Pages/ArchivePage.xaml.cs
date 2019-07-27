@@ -1,20 +1,23 @@
-﻿using FundooApplication.Model;
-using FundooApplication.Repository;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using static FundooApplication.Model.TypeOfNote;
-
+﻿//--------------------------------------------------------------------------------------------------------------------
+// <copyright file="ArchivePage.cs" company="BridgeLabz">
+// copyright @2019 
+// </copyright>
+// <creater name="Nikita Sonawane"/>
+//------------------------------------------------------------------------------------------------------------------
 namespace FundooApplication.Pages
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ArchivePage : ContentPage
-	{
+    using System;
+    using System.Collections.Generic;
+    using System.Threading.Tasks;
+    using FundooApplication.Model;
+    using FundooApplication.Repository;
+    using Xamarin.Forms;
+    using Xamarin.Forms.Xaml;
+    using static FundooApplication.Model.TypeOfNote;
+
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class ArchivePage : ContentPage
+    {
         /// <summary>
         /// The firebase helper is instance of helper class
         /// </summary>
@@ -217,6 +220,19 @@ namespace FundooApplication.Pages
             {
                 Console.WriteLine(ex.Message);
             }
+        }
+
+        /// <summary>
+        /// Called when [back button pressed].
+        /// </summary>
+        /// <returns></returns>
+        protected override bool OnBackButtonPressed()
+        {
+            DisplayAlert("Alert", "Please logout first from app", "Ok");
+
+            ////go to Edit page with that note id
+            Navigation.PushAsync(new LogoutPage());
+            return base.OnBackButtonPressed();
         }
     }
 }
